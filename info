@@ -1,0 +1,37 @@
+Dart : info
+- Approachable : 널 안전성 및 패턴 매칭과 같은 최신 기능을 제공하는 일관되고 간결하며 강력한 형식의 프로그래밍 언어
+- Portable and fast : 모바일, 데스크톱, 백엔드용 ARM, x64, RISC-V 머신 코드로 컴파일
+- Productive : 반복적으로 변경 사항을 적용
+- 2개의 컴파일 방법 보유 : JIT, AOT
+
+Dart : platforms
+- native platform : 모바일 및 데스크톱 기기를 타겟으로 하는 앱의 경우 Dart에는 JIT(Just-In-Time) 컴파일을 갖춘 Dart VM과 머신 코드를 생성하는 AOT(Ahead-Of-Time) 컴파일러가 모두 포함(iOS, Android, window, Mac 등등 여러 OS에서 사용 가능)
+- web platform : 웹을 타겟팅하는 앱의 경우, Dart는 개발 또는 프로덕션 목적으로 컴파일 할 수 있습니다. Dart의 웹 컴파일러는 Dart를 JavaScript 또는 WebAssembly로 변환
+
+AOT 컴파일러란 ahead-of-time compiler
+- 네이티브(arm, x86, x64), 웹(js)
+- 시스템에 맞게 최적화된 바이너리를 생성하므로 컴파일에 많은 시간이 걸린다.
+- 최종 배포시 사용.
+
+JIT 컴파일러 just-in-time compiler
+- dart VM 사용
+- 코드의 결과를 바로 보여준다.
+- 가상머신에서 동작중이라 조금 느리지만 많은 디버깅 옵션도 지원.
+- 개발중에만 사용하며 배포에는 사용하지 않음.
+
+null safety 특성을 가진다.(제일 큰 특성) c나 java에서 null 참조하면 오류 발생.
+
+flutter, dart 둘 다 google 에서 개발 한 것이다 즉 flutter 의 성능 향상을 위해 dart 를 변경 하는 것도 가능하다.
+
+flutter 가 처음 나왔을 때 AOT 컴파일러 는 없었다. flutter 팀의 요청에 의해 dart 팀에서 개발 한 것.
+
+dartpad.dev/ 접속하여 테스트 진행
+
+vscode 기반으로 사용하려면
+- powerShell을 관리자모드로 실행
+- Chocolatey 설치(대부분 깔려있음) 확인 명령어 choco --version
+- choco install dart-sdk로 dart-sdk 설치
+- 환경변수 시스템 Path에 설정필요
+- dart --version으로 설치된 dart-sdk 확인
+
+- 터미널에서 dart run main.dart로 파일 실행가능
